@@ -1,0 +1,1 @@
+Holberton School studend learning aboute Linux comand and scripts

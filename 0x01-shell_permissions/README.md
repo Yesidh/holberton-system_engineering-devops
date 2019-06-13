@@ -1,0 +1,1 @@
+I'm a Holberton student and for this project, i´m goin to learn about shell permissions: chmod, sudo, su, chown, chgrp,id, groups, whoama, adduser, useradd, addgroup

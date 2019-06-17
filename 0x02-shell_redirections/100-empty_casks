@@ -1,2 +1,2 @@
 #!/bin/bash
-cat | ls -aR | find .  -type d -empty | find . -type f -empty
+find .  -type d -empty | find . -type f -empty | ls -Ra | cat

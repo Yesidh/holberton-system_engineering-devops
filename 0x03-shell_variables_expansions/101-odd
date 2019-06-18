@@ -1,2 +1,2 @@
 #!/bin/bash
-paste -d ".:" -s | tr ':' '\n'
+paste - - | cut -f1

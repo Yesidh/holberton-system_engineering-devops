@@ -10,7 +10,7 @@
 # if the file is a regular file: holbertonschool is a regular file
 # if the file is not a regular file: (nothing)
 file="holbertonschool"
-if [ -e $file ]; then
+if [ -a $file ]; then
     echo "$file file  exists"
    if [ -s $file ]; then
        echo "$file file is not empty"

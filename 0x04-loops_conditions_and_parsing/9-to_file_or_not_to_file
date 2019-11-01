@@ -11,7 +11,7 @@
 # if the file is not a regular file: (nothing)
 file="holbertonschool"
 if [ -a $file ]; then
-    echo "$file file  exists"
+    echo "$file file exists"
    if [ -s $file ]; then
        echo "$file file is not empty"
    else

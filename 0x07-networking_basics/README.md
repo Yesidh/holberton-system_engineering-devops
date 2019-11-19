@@ -52,5 +52,4 @@ for my learning in Holberton School
 |**2-MAC_and_IP_address**| What is a MAC address?, What is an IP address?|
 |**3-UDP_and_TCP**| TCP and UDP statements|
 |**4-TCP_and_UDP_ports**| bash script for print listening sockets and PID|
-|**5-is_the_host_on_the_network**| Bash script Accepts a string as an argument Displays Usage: 5-is_the_host_on_the_network {IP_ADDRESS} if no argument passed
-Ping the IP 5 times|
+|**5-is_the_host_on_the_network**| Bash script Accepts a string as an argument Displays Usage: 5-is_the_host_on_the_network {IP_ADDRESS} if no argument passed Ping the IP 5 times|

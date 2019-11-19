@@ -11,12 +11,12 @@
   - What it is
   - How many layers it has
   - How it is organized
--What is a LAN
-      - Typical usage
-      - Typical geographical size
+- What is a LAN
+  - Typical usage
+  - Typical geographical size
 -What is a WAN
-      - Typical usage
-      - Typical geographical size
+  - Typical usage
+  - Typical geographical size
 - What is the Internet
   - What is an IP address
   - What are the 2 types of IP address
@@ -28,8 +28,26 @@
   - What is the main difference between TCP and UDP
   - What is a port
   - Memorize SSH, HTTP and HTTPS port numbers
-  - What tool/protocol is often used to check if a device is connected to a network## Examples                                                                     
-##Examples
+  - What tool/protocol is often used to check if a device is connected to a network
+## Examples
+Bash script that:
+- Accepts a string as an argument
+- Displays Usage: 5-is_the_host_on_the_network {IP_ADDRESS} if no argument passed
+- Ping the IP 5 times
+the input:
+```
+./5-is_the_host_on_the_network 8.8.8.8
+```
+the output
+```
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=63 time=12.9 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=63 time=13.6 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=63 time=7.83 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=63 time=11.3 ms
+64 bytes from 8.8.8.8: icmp_seq=5 ttl=63 time=7.57 ms
+```
+for more information see the example 5-is_the_host_on_the_network
 ## Prerequisites
 8 lecture hours about OSI model
 ## Installing

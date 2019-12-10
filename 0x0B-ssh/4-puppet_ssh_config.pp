@@ -3,5 +3,5 @@
 #    Your SSH client configuration must be configured to refuse to authenticate using a password
 
 exec {'change_ssh_config':
-      command => '/bin/echo "PasswordAuthentication no\nIdentityFile ~/.ssh/holberton" > /etc/ssh/ssh_config'
-      }
+command => '/bin/echo "PasswordAuthentication no\nIdentityFile ~/.ssh/holberton" > /etc/ssh/ssh_config'
+    }

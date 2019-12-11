@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # bash script to install Nginx
 
-sudo apt-get -y update
+sudo apt-get update
 sudo apt-get -y install nginx
+sudo -i
 echo "Holberton School" > /usr/share/nginx/html/index.html

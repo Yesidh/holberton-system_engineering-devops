@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# bash script to install Nginx and redirec to another page
+
+sudo apt-get update
+sudo apt-get -y install nginx
+sudo -i
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
+sed -i "s/server_name _;/server_name _;\n\tlocation \/redirec_me {\n\t\treturn 301 https:\/\/www.komoroske.com/sudoku;\n\t}" /etc/nginx/sites-available/default
+sudo service nginx restart

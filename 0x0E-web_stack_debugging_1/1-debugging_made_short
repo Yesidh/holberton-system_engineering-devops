@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # bash script for change 8080 by 80 in the /etc/nginx/sites-enabled/default
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service nginx restart
+service nginx stop

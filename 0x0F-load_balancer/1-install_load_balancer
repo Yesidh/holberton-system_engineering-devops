@@ -6,7 +6,7 @@ sudo apt-get -y update
 sudo apt-get -y install haproxy=1.6.\*
 echo "frontend web-front
     bind *:80
-    default_backend web_backend
+    default_backend web-backend
 backend web-backend
     balance roundrobin
     mode http

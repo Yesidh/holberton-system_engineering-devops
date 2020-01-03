@@ -7,9 +7,9 @@ sudo apt-get -y install haproxy=1.6.\*
 echo "backend web-backend
     balance roundrobin
     mode http
-    server 944-web-01 35.243.157.160 check
-    server 944-web-02 34.73.149.36 check
+    server 944-web-01 35.243.157.160:80 check
+    server 944-web-02 34.73.149.36:80 check
 frontend web-front
-    bind*:80
+    bind *:80
     default_backend web_backend" | sudo tee -a /etc/haproxy/haproxy.cfg
 sudo service haproxy restar

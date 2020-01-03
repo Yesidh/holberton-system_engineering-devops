@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 # bash script that configure a header in nginx
 
-sudo -i
-sed "12 a\
-# the header information\
-add_header X-Served-By \$hostname;" /etc/nginx/nginx.conf
+sudo sed -i "21i add_header X-Served-By \$hostname;" /etc/nginx/nginx.conf
 sudo service nginx restart

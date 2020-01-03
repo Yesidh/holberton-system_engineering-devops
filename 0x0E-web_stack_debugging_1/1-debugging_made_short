@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # bash script for change 8080 by 80 in the /etc/nginx/sites-enabled/default
-
 sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
-sudo pkill -f nginx
+pkill -f nginx
 sudo service nginx restart

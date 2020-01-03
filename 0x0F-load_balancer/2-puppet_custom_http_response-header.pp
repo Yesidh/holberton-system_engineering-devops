@@ -1,16 +1,16 @@
-# bash script that install nginx and configure http header
+# install nginx and configure http header
 
-exec {'install nginx':
+exec { 'install nginx':
   command => 'sudo apt-get -y update && sudo apt-get -y install nginx',
-  provider => 'shell',
+  provider => shell,
      }
 
-exec {'http header':
+exec { 'http header':
   command => 'sudo sed -i "21i add_header X-Served-By \$hostname;" /etc/nginx/nginx.conf'
   provider => shell,
 }
 
-exec {'restar nginx':
+exec { 'restar nginx':
   command => 'sudo service nginx restart',
   provider => shell,
 }

@@ -12,4 +12,4 @@ backend web-backend
     mode http
     server 944-web-01 35.243.157.160:80 check
     server 944-web-02 34.73.149.36:80 check" | sudo tee -a /etc/haproxy/haproxy.cfg
-sudo service haproxy restar
+sudo service haproxy restart

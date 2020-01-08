@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Bash script with function tha shows subdomains and it IP address
+
+function_subdomain ()
+{
+	domain="$1"
+	if [ -z "$2" ]; then
+	   subdomain="www lb-01 web-01 web-02"
+	else
+		subdomain="$2"
+	fi
+	for algunacosita in $subdomain; do
+	    echo "The subdomain $sub" dig $algunacosita.$domain | grep -A1 "ANSWER SECTION:" | tail -n 1 | awk '{print "is a "$4" record and points to "$5"}'
+	done
+}
+function_subdomain "$1" "$2"

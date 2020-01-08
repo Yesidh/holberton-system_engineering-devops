@@ -10,7 +10,8 @@ function_subdomain ()
 		subdomain="$2"
 	fi
 	for algunacosita in $subdomain; do
-	    echo "The subdomain $sub" dig $algunacosita.$domain | grep -A1 "ANSWER SECTION:" | tail -n 1 | awk '{print "is a "$4" record and points to "$5"}'
+	    echo -n "The subdomain $algunacosita "
+	    dig $algunacosita.$domain | grep -A1 "ANSWER SECTION:" | tail -n 1 | awk '{print "is a "$4" record and points to "$5}'
 	done
 }
 function_subdomain "$1" "$2"

@@ -6,13 +6,9 @@
 
 
 
-# :colombia: DevOps  - Firewall                                                
-- What is a Firewall?
-- What are the 2 types of Firewall?
-- What is the main function of a Firewall?
+# :colombia: DevOps  - What happens when you type holbertonschool.com in your browser and press Enter                                                
 ## Examples
 ## Prerequisites
-- Google: firewall and read a lot of information
 ## Installing
 ## Built With
 All the code was write under ubuntu 14.04                                 
@@ -27,6 +23,5 @@ for my learning in Holberton School
 
 |             File               |             Description                  |
 |--------------------------------| ---------------------------------------- |
-|**0-firewall_ABC**|responding some questions|
-|**1-block_all_incoming_traffic_but**|installing and configuratin ufw firewall|
-|**100-port_forwarding**|Configure web-01 so that its firewall redirects port 8080/TCP to port 80/TCP.|
+|**0-blog_post**||
+|**1-what_happen_when_diagram**||

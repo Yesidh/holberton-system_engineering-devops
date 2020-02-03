@@ -20,7 +20,7 @@ if __name__ == "__main__":
         if user.get('userId') == int(sys.argv[1]):
             num_task += 1
             if user.get('completed') == True:
-                done_task +=1
+                done_task += 1
     print('Employee {} is done with tasks({}/{}):'.format(r,
                                                           done_task, num_task))
     for user in r2:

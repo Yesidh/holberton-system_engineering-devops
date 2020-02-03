@@ -17,13 +17,13 @@ if __name__ == "__main__":
     done_task = 0
     num_task = 0
     for user in r2:
-        if user.get('userId') == int(sys.argv[1]):
+        if int(sys.argv[1]) == user.get('userId'):
             num_task += 1
-            if user.get('completed') == True:
+            if user.get('completed') is True:
                 done_task += 1
     print('Employee {} is done with tasks({}/{}):'.format(r,
                                                           done_task, num_task))
     for user in r2:
         if user.get('userId') == int(sys.argv[1]):
-            if user.get('completed') == True:
+            if user.get('completed') is True:
                 print('\t {}'.format(user.get('title')))

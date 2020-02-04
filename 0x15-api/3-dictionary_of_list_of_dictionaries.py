@@ -26,11 +26,11 @@ if __name__ == "__main__":
     my_dict = {}
     for item in range(0, len(r)):
         for user in r2:
-           user['task'] = user.pop('title')
-           user.pop('id')
-           user.pop('userId')
-           user['username'] = r[item].get('username')
-           my_list.append(user)
+            user['task'] = user.pop('title')
+            user.pop('id')
+            user.pop('userId')
+            user['username'] = r[item].get('username')
+            my_list.append(user)
         my_dict['{}'.format(r[item].get('id'))] = my_list
 
     with open('todo_all_employees.json', 'w') as file:

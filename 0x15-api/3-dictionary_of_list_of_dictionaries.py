@@ -24,13 +24,14 @@ if __name__ == "__main__":
     r2 = requests.get(url2).json()
     my_list = []
     my_dict = {}
+    for item in range(0, len(r)):
+        for user in r2:
+           user['task'] = user.pop('title')
+           user.pop('id')
+           user.pop('userId')
+           user['username'] = r[item].get('username')
+           my_list.append(user)
+        my_dict['{}'.format(r[item].get('id'))] = my_list
+
     with open('todo_all_employees.json', 'w') as file:
-        for item in range(0, len(r)):
-            for user in r2:
-                user['task'] = user.pop('title')
-                user.pop('id')
-                user.pop('userId')
-                user['username'] = r
-                my_list.append(user)
-            my_dict['{}'.format(r[item].get('id'))] = my_list
         json.dump(my_dict, file)

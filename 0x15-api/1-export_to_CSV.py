@@ -19,7 +19,7 @@ import sys
 if __name__ == "__main__":
     url = 'https://jsonplaceholder.typicode.com/users/' + sys.argv[1]
     url2 = 'https://jsonplaceholder.typicode.com/todos/'
-    r = requests.get(url).json().get('name')
+    r = requests.get(url).json().get('username')
     r2 = requests.get(url2).json()
     with open('{}.csv'.format(sys.argv[1]), 'w') as file:
         for user in r2:

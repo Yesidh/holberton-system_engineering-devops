@@ -19,24 +19,21 @@ Requirements:
 import requests
 
 
-def recurse(subreddit, hot_list=[]):
+def recurse(subreddit, hot_list=[], after=""):
     """
     function that return recursively all titles of all hot articles
     """
-    url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
+    url = 'https://www.reddit.com/r/{}/hot.json?after={}'.format(subreddit,
+                                                                 after)
     header = {'User-Agent': 'custom agent'}
     r = requests.get(url, headers=header, allow_redirects=False)
     if r.status_code == 200:
-        while r.json().get('data').get('after'):
-            for i in range(r.json().get('data').get('dist')):
-                hot_list.append('x')
-            if r.status_code == 200:
-                a = r.json().get('data').get('after')
-                url = 'https://www.reddit.com/r/{}/hot.json?after={}'.format(
-                    subreddit, a)
-                header = {'User-Agent': 'custom agent'}
-                r = requests.get(url, headers=header, allow_redirects=False)
-        return hot_list
+        for i in range(r.json().get('data').get('dist')):
+            hot_list.append('x')
+            a = r.json().get('data').get('after')
+        if (a):
+            return (recurse(subreddit, hot_list, a))
+        else:
+            return hot_list
     else:
-        print(None)
-        return 0
+        return None

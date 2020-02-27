@@ -1,7 +1,7 @@
 # change values in the file /etc/default/nginx/
 
 exec {'concurrence_conections'
-  command => "/usr/bin/sed -i 's/15/30000' /etc/default/nginx",
+  command => "/usr/bin/sed -i \'s/15/30000\' /etc/default/nginx",
   command => 'sudo service nginx restart',
   provider => shell,
 }
